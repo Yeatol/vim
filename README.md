@@ -18,15 +18,16 @@ Copy the repository's `vimrc` to the user configuration path:
 | Platform | User configuration path |
 | --- | --- |
 | Windows | `%USERPROFILE%\_vimrc` |
-| Linux / macOS | `~/.vimrc` |
+| FreeBSD | `~/.vimrc` |
+| Linux | `~/.vimrc` |
 
 You can also install it as a system-wide configuration:
 
 | Platform | System configuration path |
 | --- | --- |
 | Windows | `C:\Program Files (x86)\Vim\.vimrc` |
-| Linux | `/etc/vimrc` |
 | FreeBSD | `/usr/local/etc/vim/vimrc` |
+| Linux | `/etc/vimrc` |
 
 Restart Vim after copying the file. To load it immediately, run `:source <configuration-file-path>` in Vim.
 
