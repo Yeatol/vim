@@ -134,17 +134,31 @@ highlight TabLineSel   guifg=#ffffff guibg=grey20  gui=NONE ctermfg=231 ctermbg=
 "    C++
 "===================================================================================================
 function CppHighlight()
-    syntax keyword cppType std array vector deque forward_list list set map multiset multimap
-    syntax keyword cppType unordered_set unordered_map unordered_multiset unordered_multimap
-    syntax keyword cppType stack queue priority_queue span string wstring byte tuple pair
-    syntax keyword cppType variant optional function complex regex atomic thread
-    syntax keyword cppType shared_ptr mutex timed_mutex recursive_mutex
-    syntax keyword cppType recursive_timed_mutex shared_mutex shared_timed_mutex
+    syntax keyword cppType std
+    syntax keyword cppType array vector deque list forward_list
+    syntax keyword cppType set multiset map multimap
+    syntax keyword cppType unordered_set unordered_multiset
+    syntax keyword cppType unordered_map unordered_multimap
+    syntax keyword cppType stack queue priority_queue
+    syntax keyword cppType span string wstring string_view wstring_view
+    syntax keyword cppType byte tuple pair
+    syntax keyword cppType variant optional expected any monostate
+    syntax keyword cppType function complex regex
+    syntax keyword cppType unique_ptr shared_ptr weak_ptr
+    syntax keyword cppType mutex shared_mutex
+    syntax keyword cppType thread jthread
     syntax keyword cppType lock_guard scoped_lock unique_lock shared_lock
+    syntax keyword cppType condition_variable future shared_future
+    syntax keyword cppType promise packaged_task atomic
+    syntax keyword cppType random_device mt19937
+    syntax keyword cppType path filesystem_error directory_entry
+    syntax keyword cppType file_status space_info
+    syntax keyword cppType duration time_point
+    syntax keyword cppType system_clock steady_clock high_resolution_clock
 endfunction
 
 function CppSettings()
-    set fileformat=dos
+    set fileformat=unix
     set fileencoding=utf-8
     call CppHighlight()
 endfunction
