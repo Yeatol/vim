@@ -391,3 +391,7 @@ augroup StartupRedraw
     autocmd!
     autocmd VimEnter * redraw!
 augroup END
+
+if v:vim_did_enter
+    redraw!
+endif
