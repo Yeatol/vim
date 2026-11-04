@@ -7,6 +7,9 @@
 "===================================================================================================
 "    VIM
 "===================================================================================================
+
+let g:skip_defaults_vim=1
+
 syntax on
 set magic
 set number
@@ -15,6 +18,7 @@ set showcmd
 set t_Co=256
 set wildmenu
 set autochdir
+set scrolloff=5
 set laststatus=2
 set nocompatible
 set showtabline=1
@@ -24,6 +28,7 @@ set visualbell t_vb=
 set virtualedit=block
 set hlsearch incsearch
 filetype plugin indent on
+set ttimeout ttimeoutlen=100
 set nrformats=octal,hex,alpha
 set backspace=indent,eol,start
 set whichwrap=b,s,h,l,<,>,[,],~
