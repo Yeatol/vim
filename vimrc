@@ -389,9 +389,5 @@ inoremap <silent> <4-MiddleMouse> <Nop>
 
 augroup StartupRedraw
     autocmd!
-    autocmd VimEnter * redraw!
+    autocmd VimEnter * call timer_start(0, {timer -> execute('redraw!')})
 augroup END
-
-if v:vim_did_enter
-    redraw!
-endif
