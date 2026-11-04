@@ -15,6 +15,7 @@ set magic
 set number
 set nowrap
 set showcmd
+set bg=light
 set t_Co=256
 set wildmenu
 set autochdir
