@@ -386,3 +386,8 @@ inoremap <silent> <MiddleMouse>   <Nop>
 inoremap <silent> <2-MiddleMouse> <Nop>
 inoremap <silent> <3-MiddleMouse> <Nop>
 inoremap <silent> <4-MiddleMouse> <Nop>
+
+augroup StartupRedraw
+    autocmd!
+    autocmd VimEnter * redraw!
+augroup END
